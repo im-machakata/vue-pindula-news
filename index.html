@@ -2,7 +2,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Vue 3 Boilerplate</title>
+    <meta property="author" content="Isaac Machakata" />
+    <title>Vued Pindula News</title>
     <!-- Load Vue from a CDN -->
     <script src="https://unpkg.com/vue@next"></script>
   </head>
@@ -11,15 +12,16 @@
       <menu-component />
       <footer-component />
     </div>
-    <script src="./Header.vue"></script>
-    <script src="./News.vue"></script>
-    <script src="./Advertisement.vue"></script>
-    <script src="./Footer.vue"></script>
+    <script src="./js/Header.vue"></script>
+    <script src="./js/Menu.vue"></script>
+    <script src="./js/News.vue"></script>
+    <script src="./js/Advertisement.vue"></script>
+    <script src="./js/Footer.vue"></script>
     <script>
       // Create the app and register the component
       const app = Vue.createApp({
         components: {
-          "my-component": window["MyComponent"],
+          "menu-component": window["MenuComponent"],
         },
       });
 

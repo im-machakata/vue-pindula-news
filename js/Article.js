@@ -1,4 +1,4 @@
-Vue.component('news-component', {
+Vue.component('article-component', {
     template: `
       <div>
         <h1>{{ title }}</h1>

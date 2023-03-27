@@ -1,4 +1,4 @@
-const HeaderComponent = {
+const FooterComponent = {
   template: `
     <div>
     copyright (c)

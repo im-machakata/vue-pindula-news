@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Vue 3 Boilerplate</title>
+    <!-- Load Vue from a CDN -->
+    <script src="https://unpkg.com/vue@next"></script>
+  </head>
+  <body>
+    <div id="app">
+      <menu-component />
+      <footer-component />
+    </div>
+    <script src="./Header.vue"></script>
+    <script src="./News.vue"></script>
+    <script src="./Advertisement.vue"></script>
+    <script src="./Footer.vue"></script>
+    <script>
+      // Create the app and register the component
+      const app = Vue.createApp({
+        components: {
+          "my-component": window["MyComponent"],
+        },
+      });
+
+      // Mount the app
+      app.mount("#app");
+    </script>
+  </body>
+</html>

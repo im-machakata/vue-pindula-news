@@ -1,22 +1,14 @@
-const AdvertisementComponent = {
+Vue.component('advertisement-component', {
     template: `
       <div>
-        <ul>
-          <li v-for="item in items" :key="item.id">{{ item.name }}</li>
-        </ul>
+        <h1>{{ title }}</h1>
+        <p>{{ message }}</p>
       </div>
     `,
-  
     data() {
       return {
-        items: []
-      };
-    },
-  
-    async created() {
-    //   const response = await fetch('https://api.example.com/items'); // Replace this with your API URL
-    //   const data = await response.json();
-    //   this.items = data;
+        title: 'My Component',
+        message: 'Hello, world!'
+      }
     }
-  };
-  
+  })

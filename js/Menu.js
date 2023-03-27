@@ -3,14 +3,5 @@ const MenuComponent = {
     <div>
     menu yacho
     </div>
-  `,
-
-  data() {
-    return {
-      items: []
-    };
-  },
-
-  async created() {
-  }
+  `
 };

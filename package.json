@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
-    "build": "vite build"
+    "build": "vite build",
+    "deploy": "npm install && yarn build"
   },
   "dependencies": {
     "tailwindcss": "^3.2.7",

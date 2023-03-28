@@ -1,10 +1,13 @@
+/* index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
   --primary: #1545ca;
   --secondary: #004f7c
 }
-* {
-  box-sizing: border-box;
-}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

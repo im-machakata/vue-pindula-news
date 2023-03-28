@@ -1,5 +1,5 @@
 <template>
-    <div class="title">{{ msg }}</div>
+    <div class="title text-2xl font-bold text-gray-800">{{ msg }}</div>
     <nav>
         <ul>
             <li v-for="item in items"><a v-bind:href="item.href" @click="menuClicked($event,item.text)">{{item.text}}</a></li>

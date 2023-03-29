@@ -1,5 +1,5 @@
 <template>
-  <footer class="border-t-2 py-4 fixed bottom-0 w-full text-white">
+  <footer class="border-t-2 py-4 fixed bottom-0 w-full bg-blue-900 text-white">
     Learn something new everyday.
   </footer>
 </template>

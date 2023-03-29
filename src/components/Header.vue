@@ -1,6 +1,8 @@
 <template>
-    <a href="/" class="my-0"><img alt="Vue logo" class="mx-auto my-0 shadow" src="../assets/logo.png" /></a>
-    <div class="title text-2xl font-bold text-gray-800 mt-3 mb-5">{{ msg }}</div>
+    <section>
+        <a href="/" class="my-0"><img alt="Vue logo" class="mx-auto my-0 shadow-md rounded-md border-2 border-cyan-200" src="../assets/logo.png" /></a>
+        <div class="title text-2xl mt-3 mb-5 text-cyan-200 font-extrabold uppercase">{{ msg }}</div>
+    </section>
 </template>
 <script>
 export default {
@@ -8,19 +10,18 @@ export default {
     props: {
         title: String
     },
-    data(){
+    data() {
         return {
             msg: null
         }
     },
-    created(){
-        this.msg = this.title ? this.title : 'Pindura';
+    created() {
+        this.msg = this.title ? this.title : 'Vue Pindula';
     }
 }
 </script>
 <style scoped>
 img {
-    border: 2px solid var(--primary);
     border-radius: 0.5em;
     padding: 12px 8px 6px 8px;
     height: 100px;

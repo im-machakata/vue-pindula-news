@@ -1,9 +1,7 @@
 <template>
-    <nav class="nav mx-auto container">
-        <ul class="flex flex-row justify-content-center mx-auto w-full">
-            <li v-for="item in items" class="px-2"><a v-bind:href="item.href" @click="menuClicked($event,item.text)">{{item.text}}</a></li>
-        </ul>
-    </nav>
+  <footer class="border-t-2 py-4 fixed bottom-0 w-full text-white">
+    2023 &copy; Copyright of <a href="//twitter.com/immachakata" target="_blank" class="text-cyan-200">immachakata</a>
+  </footer>
 </template>
 <script>
 export default {

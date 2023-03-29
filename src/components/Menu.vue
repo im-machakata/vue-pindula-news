@@ -1,7 +1,7 @@
 <template>
-    <nav class="nav">
-        <ul class="d-flex">
-            <li v-for="item in items"><a v-bind:href="item.href" @click="menuClicked($event,item.text)">{{item.text}}</a></li>
+    <nav class="nav mx-auto container">
+        <ul class="flex flex-row justify-content-center mx-auto w-full">
+            <li v-for="item in items" class="px-2"><a v-bind:href="item.href" @click="menuClicked($event,item.text)">{{item.text}}</a></li>
         </ul>
     </nav>
 </template>

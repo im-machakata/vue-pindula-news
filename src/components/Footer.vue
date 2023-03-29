@@ -1,6 +1,6 @@
 <template>
   <footer class="border-t-2 py-4 fixed bottom-0 w-full text-white">
-    2023 &copy; Copyright of <a href="//twitter.com/immachakata" target="_blank" class="text-cyan-200">immachakata</a>
+    Learn something new everyday.
   </footer>
 </template>
 <script>

@@ -1,5 +1,5 @@
 <template>
-  <section class="news-list grid grid-cols-1 md:grid-cols-2 md:grid-x-4 mt-4 lg:grid-cols-3 lg:gap-x-6">
+  <section class="news-list">
     <div v-for="item in news"
       class="news-item">
       <div class="news-image">

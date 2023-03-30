@@ -1,5 +1,4 @@
 <template>
-  <p v-bind:model="ip" > {{ ip }} </p>
   <section class="news-list">
     <div v-for="item in news"
       class="news-item">
@@ -32,11 +31,11 @@ export default {
     }
   },
   created() {
-    fetch('https://api.ipify.org/?format=json')
-      .then(res => res.json())
-      .then(data => this.ip = data.ip)
-      .catch(err => console.error(err));
-
+    let key = 'YTkyNmNkMDA5YWQzMzQ5MmM4YjFjYTRlOWZiMzQ1ODY=';
+    let url = `https://api.scraperapi.com/?api_key=${atob(key)}&url=https://zero.pindula.co.zw/api/posts`;
+    let response = await fetch(url);
+    response = await response.text();
+    console.log(response.results);
     for (let i = 1; i < 10; i++) {
       this.news.push(
         {

@@ -26,15 +26,14 @@ export default {
   },
   data() {
     return {
-      news: [],
-      ip: null
+      news: []
     }
   },
   created() {
-    let key = 'YTkyNmNkMDA5YWQzMzQ5MmM4YjFjYTRlOWZiMzQ1ODY=';
-    let url = `https://api.scraperapi.com/?api_key=${atob(key)}&url=https://zero.pindula.co.zw/api/posts`;
+    let key = atob('YTkyNmNkMDA5YWQzMzQ5MmM4YjFjYTRlOWZiMzQ1ODY=');
+    let url = "https://api.scraperapi.com/?api_key="+key+"&url=https://zero.pindula.co.zw/api/posts";
     let response = await fetch(url);
-    response = await response.text();
+    response = await response.json();
     console.log(response.results);
     for (let i = 1; i < 10; i++) {
       this.news.push(

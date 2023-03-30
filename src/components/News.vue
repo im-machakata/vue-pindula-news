@@ -34,7 +34,7 @@ export default {
     let url = "https://api.scraperapi.com/?api_key="+key+"&url=https://zero.pindula.co.zw/api/posts";
     let response = await fetch(url);
     response = await response.json();
-    this.news = response;
+    this.news = response.results;
   }
 }
 </script>

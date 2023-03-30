@@ -11,7 +11,7 @@
     @apply text-left text-white border-2 border-cyan-50 hover:shadow-sm rounded-md mb-5 cursor-pointer;
   }
   .news-image {
-    @apply  bg-cyan-50 rounded-t p-2 mb-1 shadow-lg text-center;
+    @apply  bg-cyan-50 rounded-t mb-1 shadow-lg text-center;
   }
   .news-title {
     @apply text-2xl font-semibold font-serif;

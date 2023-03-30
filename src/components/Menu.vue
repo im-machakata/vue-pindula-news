@@ -1,6 +1,6 @@
 <template>
     <nav class="mx-auto shadow-md border-y-2 bg-blue-900 w-full py-4">
-        <ul class="flex flex-row justify-around items-center mr-10 font-semibold w-full">
+        <ul class="flex flex-row justify-around items-center lg:mr-10 font-semibold w-full font-sans">
             <li v-for="item in items" class="px-2 text-white"><a v-bind:href="item.href" @click="menuClicked($event,item.text)">{{item.text}}</a></li>
         </ul>
     </nav>
@@ -39,5 +39,3 @@ export default {
   },
 }
 </script>
-<style scoped>
-</style>

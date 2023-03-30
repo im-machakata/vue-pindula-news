@@ -20,17 +20,3 @@
     @apply border-t-2 py-4 font-sans text-sm w-full bg-blue-900 text-white;
   }
 }
-
-:root {
-  --primary: #1545ca;
-  --secondary: #004f7c;
-}
-
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c4350;
-}
-

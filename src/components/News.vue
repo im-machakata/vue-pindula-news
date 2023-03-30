@@ -1,11 +1,11 @@
 <template>
-  <section class="news-list px-6:md px-3 py-5 grid grid-cols-1 grid-cols-3:lg">
+  <section class="news-list grid grid-cols-1 mt-4 grid-cols-3:lg">
     <div v-for="item in news"
-      class="text-left text-white border-2 hover:shadow-lg shadow rounded-md mb-5 cursor-pointer col">
-      <div class="post-image bg-cyan-50 rounded-t p-2 mb-2 shadow-lg text-center">
+      class="news-item">
+      <div class="news-image">
       </div>
       <div class="px-3 py-4">
-        <a class="text-2xl font-semibold font-serif">{{ item.title }}</a>
+        <a class="news-title">{{ item.title }}</a>
         <p class="text-sm font-sans">{{ item.description }}</p>
       </div>
     </div>
@@ -44,7 +44,7 @@ export default {
 }
 </script>
 <style scoped>
-.post-image {
+.news-image {
   height: 140px;
 }
 </style>

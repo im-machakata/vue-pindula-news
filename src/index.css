@@ -5,10 +5,19 @@
 
 @layer components {
   .news-list {
-    @apply px-6:md px-3 py-5;
+    @apply md:px-6 px-3 py-5;
   }
-  .news-list .news-item {
-    @apply text-left text-white py-4 border-2 shadow-sm:hover rounded-md mb-5 px-3 cursor-pointer;
+  .news-item {
+    @apply text-left text-white border-2 border-cyan-50 hover:shadow-sm rounded-md mb-5 cursor-pointer;
+  }
+  .news-image {
+    @apply  bg-cyan-50 rounded-t p-2 mb-1 shadow-lg text-center;
+  }
+  .news-title {
+    @apply text-2xl font-semibold font-serif;
+  }
+  .page-footer {
+    @apply border-t-2 py-4 font-sans text-sm w-full bg-blue-900 text-white;
   }
 }
 

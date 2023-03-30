@@ -29,7 +29,7 @@ export default {
       news: []
     }
   },
- sync  acreated() {
+ async created() {
     let key = atob('YTkyNmNkMDA5YWQzMzQ5MmM4YjFjYTRlOWZiMzQ1ODY=');
     let url = "https://api.scraperapi.com/?api_key="+key+"&url=https://zero.pindula.co.zw/api/posts";
     let response = await fetch(url);

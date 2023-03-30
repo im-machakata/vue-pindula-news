@@ -1,5 +1,5 @@
 <template>
-  <p v-show="news.length < 1" class="text-white mt-5 px-3 pt-3">Hie! I get our news from <a href="//zero.pindula.co.zw">pindula</a> using a proxy so please give me a few seconds to get the latest news.</p>
+  <p v-show="news.length < 1" class="text-white mt-5 px-3 pt-3">Hie! I use an unconventional way to get news from <a href="//zero.pindula.co.zw">pindula</a> so please give me a few seconds.</p>
   <section class="news-list">
     <div v-for="item in news"
       class="news-item" :key="item.id">

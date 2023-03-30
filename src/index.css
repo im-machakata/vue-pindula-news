@@ -3,9 +3,18 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .news-list {
+    @apply px-6:md px-3 py-5;
+  }
+  .news-list .news-item {
+    @apply text-left text-white py-4 border-2 shadow-sm:hover rounded-md mb-5 px-3 cursor-pointer;
+  }
+}
+
 :root {
   --primary: #1545ca;
-  --secondary: #004f7c
+  --secondary: #004f7c;
 }
 
 #app {
@@ -14,5 +23,5 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c4350;
-  margin-top: 60px;
 }
+

@@ -1,4 +1,5 @@
 <template>
+  <p v-bind:model="ip" > {{ ip }} </p>
   <section class="news-list">
     <div v-for="item in news"
       class="news-item">
@@ -27,9 +28,15 @@ export default {
   data() {
     return {
       news: [],
+      ip: null
     }
   },
   created() {
+    fetch('https://api.ipify.org/?format=json')
+      .then(res => res.json())
+      .then(data => this.ip = data.ip)
+      .catch(err => console.error(err));
+
     for (let i = 1; i < 10; i++) {
       this.news.push(
         {

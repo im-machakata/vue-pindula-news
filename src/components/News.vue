@@ -1,10 +1,10 @@
 <template>
-  <section class="news-list grid grid-cols-1 mt-4 grid-cols-3:lg">
+  <section class="news-list grid grid-cols-1 md:grid-cols-2 md:grid-x-4 mt-4 lg:grid-cols-3 lg:gap-x-6">
     <div v-for="item in news"
       class="news-item">
       <div class="news-image">
       </div>
-      <div class="px-3 py-4">
+      <div class="px-3 pb-4 pt-3 bg-blue-900 mt-0">
         <a class="news-title">{{ item.title }}</a>
         <p class="text-sm font-sans">{{ item.description }}</p>
       </div>
@@ -45,6 +45,6 @@ export default {
 </script>
 <style scoped>
 .news-image {
-  height: 140px;
+  height: 150px;
 }
 </style>

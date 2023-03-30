@@ -6,7 +6,7 @@
       </div>
       <div class="px-3 pb-4 pt-3 bg-blue-900 rounded-b mt-0">
         <a class="news-title">{{ item.title }}</a>
-        <p class="text-sm font-sans">{{ item.description }}</p>
+        <p class="text-sm font-sans">{{ item.excerpt }}</p>
       </div>
     </div>
   </section>
@@ -34,17 +34,7 @@ export default {
     let url = "https://api.scraperapi.com/?api_key="+key+"&url=https://zero.pindula.co.zw/api/posts";
     let response = await fetch(url);
     response = await response.json();
-    console.log(response.results);
-    for (let i = 1; i < 10; i++) {
-      this.news.push(
-        {
-          title: 'News title #' + i,
-          description: 'A rather very long description for a interesting article number #' + i,
-          image: "/assets/logo.png",
-          image_alt: 'Image #' + i
-        }
-      );
-    }
+    this.news = response;
   }
 }
 </script>

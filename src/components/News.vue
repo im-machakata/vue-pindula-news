@@ -1,12 +1,12 @@
 <template>
   <section class="news-list">
     <div v-for="item in news"
-      class="news-item">
+      class="news-item" :key="item.id">
       <div class="news-image">
       </div>
       <div class="px-3 pb-4 pt-3 bg-blue-900 rounded-b mt-0">
         <a class="news-title">{{ item.title }}</a>
-        <p class="text-sm font-sans">{{ item.excerpt }}</p>
+        <p class="text-sm font-sans" v-html="item.excerpt"></p>
       </div>
     </div>
   </section>

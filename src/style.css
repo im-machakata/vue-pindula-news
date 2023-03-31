@@ -408,6 +408,8 @@ body {
   margin-top: 1rem;
   display: grid;
   grid-template-columns: repeat(1, minmax(0, 1fr));
+  -moz-column-gap: 0.75rem;
+       column-gap: 0.75rem;
   padding-left: 0.75rem;
   padding-right: 0.75rem;
   padding-top: 0.5rem;

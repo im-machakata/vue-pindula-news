@@ -12,30 +12,5 @@ export default {
         console.log('Wanna view',text+'?');
     }
   },
-  data() {
-    return {
-      items: [
-        {
-            text: 'Home',
-            href: '/',
-        },
-        {
-            text: 'News',
-            href: '/news',
-        },
-        {
-            text: 'Jobs',
-            href: '/jobs',
-        },
-        {
-            text: 'Market',
-            href: '/market',
-        },
-      ],
-      msg: null
-    }
-  },
 }
 </script>
-<style scoped>
-</style>

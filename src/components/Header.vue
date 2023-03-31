@@ -1,7 +1,7 @@
 <template>
     <section>
         <a href="/"><img alt="Vue logo" class="mx-auto mb-0 shadow-md rounded-md bg-white border-cyan-200 mt-7" src="../assets/logo.png" /></a>
-        <div class="title font-sans text-2xl mt-3 mb-5 text-cyan-200 font-extrabold uppercase text-center">{{ msg }}</div>
+        <div class="title font-sans text-2xl mt-3 mb-5 text-white font-extrabold uppercase text-center">{{ msg }}</div>
     </section>
 </template>
 <script>

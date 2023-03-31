@@ -1,55 +1,49 @@
 <template>
-  <p v-show="news.length < 1" class="text-white mt-5 px-3 pt-3 lg:text-center lg:flex lg:justify-center">
-    Hie! I use an unconventional way to get news from <a href="//zero.pindula.co.zw"
-      class="text-cyan-400 lg:mx-1">pindula</a> so
+  <p v-show="news.length < 1 && !connection_error" class="text-white mt-5 px-3 pt-3 lg:text-center">
+    Hie! I use an unconventional way to get news from <a href="//zero.pindula.co.zw" class="text-cyan-400">pindula</a> so
     please give me a few seconds to load.
+  </p>
+  <p v-show="connection_error && news.length < 1" class="text-white mt-5 px-3 pt-3 lg:text-center">
+    An error occured connecting to the server. <a @click="fetchNews()" class="text-cyan-400">Retry</a>
   </p>
   <section class="news-list">
     <div v-for="item in news" class="news-item" :key="item.id">
-      <img class="news-image" v-bind:src="item.image">
+      <img class="news-image" v-bind:src="item.image_src">
       <div>
-        <a class="news-title" v-bind:title="item.title" target="_blank" @click="readArticle = true">{{ item.title
-        }}</a>
+        <a class="news-title" v-bind:title="item.title" target="_blank" v-bind:href="'//zero.pindula.co.zw/'+item.slug">{{ item.title }}</a>
         <p class="text-sm font-sans excerpt" v-html="item.excerpt"></p>
       </div>
-      <Article v-if="readArticle" author="{{item.author}}"> {{ item.content }}</Article>
     </div>
   </section>
 </template>
 <script>
-import Article from './Article.vue'
 
 export default {
   name: 'News',
-  components: {
-    Article,
-  },
   methods: {
-    menuClicked: (e, text) => {
-      e.preventDefault();
-      console.log('Wanna view', text + '?');
-    },
     fetchNews() {
       fetch(atob(this.news_url))
         .then(response => response.json())
         .then(response => {
-          this.news = response.results
+          this.news = response.results;
+          this.connection_error = false;
         })
         .catch(err => {
-          alert("Failed to connect to server.")
+          this.connection_error = true;
         });
     }
   },
   data() {
     return {
       news: [],
-      readArticle: false,
+      read_article: false,
+      connection_error: false,
       news_url: 'aHR0cHM6Ly9hcGkuc2NyYXBpbmdhbnQuY29tL3YyL2dlbmVyYWw/dXJsPWh0dHBzJTNBJTJGJTJGemVyby5waW5kdWxhLmNvLnp3JTJGYXBpJTJGcG9zdHMmeC1hcGkta2V5PTc2MmIxMjcxMWM3MDRiMzZhZjRjZWZjMWU0OTM4MmExJmJyb3dzZXI9ZmFsc2U=',
       ads_url: 'aHR0cHM6Ly9hcGkuc2NyYXBpbmdhbnQuY29tL3YyL2dlbmVyYWw/dXJsPWh0dHBzJTNBJTJGJTJGemVyby5waW5kdWxhLmNvLnp3JTJGYXBpJTJGcHJvZHVjdHMmeC1hcGkta2V5PTc2MmIxMjcxMWM3MDRiMzZhZjRjZWZjMWU0OTM4MmExJmJyb3dzZXI9ZmFsc2U='
     }
   },
   async created() {
-    this.fetchNews();
+    await this.fetchNews();
   }
 }
 </script>
@@ -58,7 +52,7 @@ img {
   height: 200px;
 }
 
-a {
+a.news-title {
 
   display: -webkit-box;
   -webkit-line-clamp: 2;

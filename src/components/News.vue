@@ -11,6 +11,7 @@
       <img class="news-image" v-bind:src="item.image_src">
       <div>
         <a class="news-title" v-bind:title="item.title" target="_blank" v-bind:href="'//zero.pindula.co.zw/'+item.slug">{{ item.title }}</a>
+        <p class="text-sm font-sans"><strong>Published</strong>: {{ item.published }} <strong>by</strong> {{ item.author }}</p>
         <p class="text-sm font-sans excerpt" v-html="item.excerpt"></p>
       </div>
     </div>

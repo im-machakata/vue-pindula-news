@@ -489,6 +489,8 @@ video {
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
     border-top-left-radius: 0.125rem;
     border-top-right-radius: 0.125rem;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
   }
   .news-image:hover {
     --tw-scale-x: 1.05;

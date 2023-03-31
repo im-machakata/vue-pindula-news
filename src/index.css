@@ -14,7 +14,7 @@
     @apply px-3 pb-4 pt-3 bg-blue-900 rounded-b-md mt-0;
   }
   .news-image {
-    @apply bg-cyan-50 rounded-t-sm mb-1 shadow-lg text-center w-full object-cover hover:scale-105 hover:rounded-md hover:shadow-2xl hover:duration-500 transition-all duration-300 hover:transition-all;
+    @apply bg-cyan-50 rounded-t-sm mb-1 shadow-lg text-center w-full object-cover scale-105 md:scale-100 md:hover:scale-105 hover:rounded-md hover:shadow-2xl hover:duration-500 transition-all duration-300 hover:transition-all;
   }
   .news-title {
     @apply text-2xl font-semibold font-serif;

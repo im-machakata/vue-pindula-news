@@ -28,9 +28,7 @@ export default {
     }
   },
   async created() {
-
-    let key = atob('YTkyNmNkMDA5YWQzMzQ5MmM4YjFjYTRlOWZiMzQ1ODY=');
-    let url = "https://api.scraperapi.com/?api_key=" + key + "&url=https://zero.pindula.co.zw/api/posts";
+    let url = "https://api.scrapingant.com/v2/general?url=https%3A%2F%2Fzero.pindula.co.zw%2Fapi%2Fposts&x-api-key=762b12711c704b36af4cefc1e49382a1&browser=false";
     fetch(url).then(response => response.json()).then(response => this.news = response.results).catch(err => alert("Failed to connect to server."));
   }
 }

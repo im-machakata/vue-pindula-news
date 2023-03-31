@@ -1,5 +1,6 @@
 <template>
-  <p v-show="news.length < 1" class="text-white mt-5 px-3 pt-3 lg:text-center">Hie! I use an unconventional way to
+  <p v-show="news.length < 1" class="text-white mt-5 px-3 pt-3  lg:pb-3 lg:text-center">Hie! I use an unconventional way
+    to
     get news from <a href="//zero.pindula.co.zw">pindula</a> so please give me a few seconds to load.</p>
   <section class="news-list">
     <div v-for="item in news" class="news-item" :key="item.id">
@@ -34,3 +35,8 @@ export default {
   }
 }
 </script>
+<style scoped>
+img {
+  height: 200px;
+}
+</style>

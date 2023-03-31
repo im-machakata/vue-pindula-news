@@ -1,5 +1,5 @@
 <template>
-    <nav class="mx-auto shadow-md border-y-4 bg-blue-900 w-full py-4">
+    <nav class="mx-auto shadow-md border-y-2 border-cyan-200 bg-blue-900 w-full py-4">
         <ul class="flex flex-row justify-around items-center lg:mr-10 font-semibold w-full font-sans cursor-pointer">
             <li v-for="item in items" class="px-2 text-white"><a v-bind:href="item.href" @click="menuClicked($event,item.text)">{{item.text}}</a></li>
         </ul>

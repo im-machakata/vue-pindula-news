@@ -5,21 +5,21 @@
 
 @layer components {
   .news-list {
-    @apply px-3 grid grid-cols-1 md:grid-cols-2 md:gap-x-4 mt-4 lg:grid-cols-3 lg:gap-x-6;
+    @apply px-3 py-2 lg:px-6 lg:py-4 grid grid-cols-1 md:grid-cols-2 md:gap-x-4 mt-4 lg:grid-cols-3 lg:gap-x-6;
   }
   .news-item {
-    @apply text-left text-white border-4 border-cyan-50 hover:shadow-sm rounded-md mb-5 cursor-pointer;
+    @apply text-left text-white border-2 border-cyan-50 hover:shadow-sm rounded-md mb-5 cursor-pointer;
   }
   .news-item div {
     @apply px-3 pb-4 pt-3 bg-blue-900 rounded-b-md mt-0;
   }
   .news-image {
-    @apply bg-cyan-50 rounded-t-sm mb-1 shadow-lg text-center w-full;
+    @apply bg-cyan-50 rounded-t-sm mb-1 shadow-lg text-center w-full object-cover hover:scale-105 hover:rounded-md hover:shadow-2xl hover:duration-500 transition-all duration-300 hover:transition-all;
   }
   .news-title {
     @apply text-2xl font-semibold font-serif;
   }
   .page-footer {
-    @apply border-t-4 border-white py-4 font-sans w-full bg-blue-900 text-white text-center;
+    @apply border-t-2 border-cyan-200 py-4 font-sans w-full bg-blue-900 text-white text-center;
   }
 }

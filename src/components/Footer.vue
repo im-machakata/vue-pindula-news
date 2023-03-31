@@ -1,6 +1,6 @@
 <template>
   <footer class="page-footer">
-    Learn something new everyday.
+    Learn something new everyday. 
   </footer>
 </template>
 <script>

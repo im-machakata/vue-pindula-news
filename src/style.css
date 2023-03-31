@@ -405,7 +405,7 @@ body {
   background-color: rgb(30 58 138 / var(--tw-bg-opacity));
 }
 .news-list {
-  margin-top: 1rem;
+  margin-top: 0.75rem;
   display: grid;
   grid-template-columns: repeat(1, minmax(0, 1fr));
   row-gap: 0.75rem;

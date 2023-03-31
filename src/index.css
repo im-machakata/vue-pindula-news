@@ -8,7 +8,7 @@
     @apply bg-blue-900;
   }
   .news-list {
-    @apply px-3 py-2 lg:px-6 lg:py-4 grid gap-y-3 grid-cols-1 md:grid-cols-2 md:gap-x-4 mt-4 lg:grid-cols-3 lg:gap-x-6;
+    @apply px-4 py-2 lg:px-6 lg:py-4 grid gap-y-3 grid-cols-1 md:grid-cols-2 md:gap-x-4 mt-4 lg:grid-cols-3 lg:gap-x-6;
   }
   .news-item {
     @apply text-left text-white border-2 border-cyan-200 hover:shadow-sm rounded-md mb-5 mt-2 md:mt-0 cursor-pointer;

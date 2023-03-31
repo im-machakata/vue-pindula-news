@@ -402,6 +402,13 @@ video {
 }
 a {
   cursor: pointer;
+  --tw-text-opacity: 1;
+  color: rgb(147 197 253 / var(--tw-text-opacity));
+}
+nav a {
+  cursor: pointer;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 body {
   --tw-bg-opacity: 1;
@@ -651,6 +658,10 @@ body {
 .uppercase {
   text-transform: uppercase;
 }
+.text-cyan-300 {
+  --tw-text-opacity: 1;
+  color: rgb(103 232 249 / var(--tw-text-opacity));
+}
 .text-cyan-400 {
   --tw-text-opacity: 1;
   color: rgb(34 211 238 / var(--tw-text-opacity));
@@ -664,6 +675,11 @@ body {
   --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
+
+.hover\:underline:hover {
+  text-decoration-line: underline;
+}
+
 @media (min-width: 1024px) {
   .lg\:mr-10 {
     margin-right: 2.5rem;

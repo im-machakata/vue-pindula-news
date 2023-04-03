@@ -580,6 +580,12 @@ blockquote {
 .mt-6 {
   margin-top: 1.5rem;
 }
+.mt-8 {
+  margin-top: 2rem;
+}
+.mt-10 {
+  margin-top: 2.5rem;
+}
 .flex {
   display: flex;
 }
@@ -742,6 +748,10 @@ blockquote {
   .dark\:bg-violet-400 {
     --tw-bg-opacity: 1;
     background-color: rgb(167 139 250 / var(--tw-bg-opacity));
+  }
+  .dark\:bg-blue-200 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(191 219 254 / var(--tw-bg-opacity));
   }
 }
 

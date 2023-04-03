@@ -29,6 +29,7 @@
   <section class="news-article" :class="{}"></section>
 </template>
 <script>
+import Loader from "../Loader.vue"
 export default {
   name: 'News',
   methods: {
@@ -62,7 +63,7 @@ export default {
     }
   },
   async created() {
-
+    this.dummy_news = Array(10);
     await this.load_news();
   }
 }

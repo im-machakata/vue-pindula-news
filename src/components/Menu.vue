@@ -28,7 +28,7 @@ export default {
           href: '//zero.pindula.co.zw/jobs/',
         },
         {
-          text: 'Market',
+          text: 'Shop',
           href: '//zero.pindula.co.zw/market/',
         },
       ],

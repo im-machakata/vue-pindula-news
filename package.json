@@ -4,7 +4,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "deploy": "yarn install && yarn build",
+    "deploy": "yarn install && yarn blow && yarn build",
+    "blow": "postcss src/index.css -o src/style.css",
     "watch": "postcss src/index.css -o src/style.css --watch"
   },
   "dependencies": {

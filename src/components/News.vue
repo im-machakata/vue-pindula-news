@@ -19,7 +19,7 @@
     <div v-for="(item , index) in news" class="news-item"  :class="{closed: !item.is_open}" :key="item.id" @click="toggleOpen(index)">
       <img class="news-image" v-bind:src="item.image_src">
       <div>
-        <a class="news-title" v-bind:title="item.title" target="_blank" v-bind:href="'//zero.pindula.co.zw/'+item.slug">{{ item.title }}</a>
+        <a class="news-title" v-bind:title="item.title">{{ item.title }}</a>
         <p class="text-sm font-sans"><strong>Published</strong>: {{ item.published }} <strong>by</strong> {{ item.author }}</p>
         <p class="text-sm font-sans excerpt" v-html="item.content"></p>
       </div>

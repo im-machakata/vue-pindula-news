@@ -37,7 +37,8 @@ export default {
       fetch(atob(this.news_url))
         .then(response => response.json())
         .then(response => {
-          this.news = response.results.forEach(element => {
+          this.news = response.results;
+          response.results.forEach(element => {
             element.is_open = false;
             return element;
           });

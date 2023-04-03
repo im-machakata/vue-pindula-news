@@ -5,8 +5,8 @@
     "dev": "vite",
     "build": "vite build",
     "deploy": "yarn install && yarn blow && yarn build",
-    "blow": "postcss src/index.css -o src/style.css",
-    "watch": "postcss src/index.css -o src/style.css --watch"
+    "blow": "postcss src/assets/index.css -o src/assets/style.css",
+    "watch": "postcss src/assets/index.css -o src/assets/style.css --watch"
   },
   "dependencies": {
     "autoprefixer": "^10.4.14",

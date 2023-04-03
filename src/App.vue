@@ -18,6 +18,6 @@ export default {
     Header,
     News,
     Footer,
-  }
+  },
 }
 </script>

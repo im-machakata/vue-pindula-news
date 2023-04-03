@@ -7,11 +7,5 @@
 <script>
 export default {
   name: 'Footer',
-  methods: {
-    menuClicked: (e,text)=>{
-        e.preventDefault();
-        console.log('Wanna view',text+'?');
-    }
-  },
 }
 </script>

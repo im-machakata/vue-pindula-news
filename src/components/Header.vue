@@ -1,6 +1,6 @@
 <template>
     <section class="text-center mt-5 lg:mt-10">
-        <a href="/" class="logo rounded font-serif bg-white text-blue-600 text-8xl px-6 relative shadow-md">P</a>
+        <a href="/" class="logo rounded font-serif bg-white font-bold text-blue-600 text-8xl px-6 relative shadow-md">P</a>
         <h1 class="title font-sans text-3xl mt-4 mb-5 text-white font-extrabold">{{ msg }}</h1>
     </section>
 </template>

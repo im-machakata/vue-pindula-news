@@ -6,7 +6,7 @@
     An error occured connecting to the server. <a @click="fetchNews()">Retry</a>
   </p>
   <section class="news-list">
-    <div v-for="item in news" class="news-item" :key="item.id">
+    <div v-for="item in news" :class="(item.is_open ? '' : 'closed' ) + 'news-item'" :key="item.id">
       <img class="news-image" v-bind:src="item.image_src">
       <div>
         <a class="news-title" v-bind:title="item.title" target="_blank" v-bind:href="'//zero.pindula.co.zw/'+item.slug">{{ item.title }}</a>
@@ -24,7 +24,9 @@ export default {
       fetch(atob(this.news_url))
         .then(response => response.json())
         .then(response => {
-          this.news = response.results;
+          this.news = response.results.array.forEach(element => {
+            element.is_open = false;
+          });
           this.connection_error = false;
         })
         .catch(err => {
@@ -51,7 +53,7 @@ img {
   height: 200px;
 }
 
-a.news-title {
+.news-item.closed .news-title {
 
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -59,7 +61,7 @@ a.news-title {
   overflow: hidden;
 }
 
-.excerpt {
+.news-item.closed .excerpt {
   display: -webkit-box;
   -webkit-line-clamp: 5;
   -webkit-box-orient: vertical;

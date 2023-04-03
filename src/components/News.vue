@@ -31,12 +31,7 @@ export default {
   name: 'News',
   methods: {
     toggleOpen(index) {
-      let item = this.news[index];
-
-      item.is_open = !item.is_open;
-
-      this.$set(this.news, index, item);
-
+      this.news[index] = !this.news[index].is_open;
     },
     fetchNews() {
       fetch(atob(this.news_url))
@@ -44,7 +39,7 @@ export default {
         .then(response => {
           this.news = response.results.forEach(element => {
             element.is_open = false;
-            // ret
+            return element;
           });
           this.connection_error = false;
         })

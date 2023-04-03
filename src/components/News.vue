@@ -20,9 +20,9 @@
 import Loader from './Loader.vue'
 export default {
   name: 'News',
-  Components: {
+  components: {
     Loader
-  }
+  },
   methods: {
     fetchNews() {
       fetch(atob(this.news_url))

@@ -15,7 +15,7 @@
     An error occured connecting to the server. <a @click="load_news()" class="hover:underline">Retry</a>
   </section>
   <section class="news-list">
-    <div v-for="(item, index) in news" class="news-item" :class="{ closed: !item.is_open }" :key="item.id"
+    <div v-for="(item, index) in latest_news" class="news-item" :class="{ closed: !item.is_open }" :key="item.id"
       @click="toggle_expand_news(index)">
       <img class="news-image" v-bind:src="item.image_src">
       <div>

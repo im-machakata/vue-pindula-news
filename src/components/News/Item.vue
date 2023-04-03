@@ -1,5 +1,5 @@
 <template>
-  <article class="news-item" :class="{ closed: !item.is_open }" :key="item.id" @click="this.$emit('view-article', item)">
+  <article class="news-item" :class="{ closed: !item.is_open }" @click="this.$emit('view-article', item)">
     <img class="news-image" v-bind:src="item.image_src">
     <div>
       <a class="news-title" v-bind:title="item.title">{{ item.title }}</a>

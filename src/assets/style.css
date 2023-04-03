@@ -490,11 +490,10 @@ blockquote {
   margin-top: 0.75rem;
   margin-bottom: 0.75rem;
   border-radius: 0.5rem;
+  border-top-width: 8px;
   --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  background-color: rgb(29 78 216 / var(--tw-bg-opacity));
   padding: 0.75rem;
-  --tw-text-opacity: 1;
-  color: rgb(17 24 39 / var(--tw-text-opacity));
 }
 .news-item div {
   margin-top: 0px;
@@ -559,7 +558,7 @@ blockquote {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
-.read-article {
+.news-article {
   bottom: 0px;
 }
 .relative {
@@ -662,11 +661,11 @@ blockquote {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
+.fill-cyan-300 {
+  fill: #67e8f9;
+}
 .fill-indigo-200 {
   fill: #c7d2fe;
-}
-.fill-indigo-800 {
-  fill: #3730a3;
 }
 .px-2 {
   padding-left: 0.5rem;
@@ -734,15 +733,18 @@ blockquote {
   --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
+
 .hover\:underline:hover {
   text-decoration-line: underline;
 }
+
 @media (prefers-color-scheme: dark) {
   .dark\:bg-violet-400 {
     --tw-bg-opacity: 1;
     background-color: rgb(167 139 250 / var(--tw-bg-opacity));
   }
 }
+
 @media (min-width: 1024px) {
   .lg\:mr-10 {
     margin-right: 2.5rem;

@@ -1,6 +1,6 @@
 <template>
   <p v-show="news.length < 1 && !connection_error" class="text-white mt-5 px-3 pt-3 lg:text-center">   
-    <div aria-label="Loading..." role="status" class="loader">
+    <!-- <div aria-label="Loading..." role="status" class="loader">
       <svg class="h-6 w-6 animate-spin" viewBox="3 3 18 18">
         <path
           class="fill-indigo-200"
@@ -9,7 +9,8 @@
           class="fill-indigo-800"
           d="M16.9497 7.05015C14.2161 4.31648 9.78392 4.31648 7.05025 7.05015C6.65973 7.44067 6.02656 7.44067 5.63604 7.05015C5.24551 6.65962 5.24551 6.02646 5.63604 5.63593C9.15076 2.12121 14.8492 2.12121 18.364 5.63593C18.7545 6.02646 18.7545 6.65962 18.364 7.05015C17.9734 7.44067 17.3403 7.44067 16.9497 7.05015Z"></path>
       </svg>
-    </div>
+    </div> -->
+    loading...
   </p>
   <p v-show="connection_error && news.length < 1" class="text-white mt-5 px-3 pt-3 lg:text-center">
     An error occured connecting to the server. <a @click="fetchNews()">Retry</a>

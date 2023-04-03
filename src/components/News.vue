@@ -21,7 +21,7 @@ import Loader from './Loader.vue'
 export default {
   name: 'News',
   Components: {
-    Loader,
+    Loader
   }
   methods: {
     fetchNews() {

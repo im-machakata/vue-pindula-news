@@ -1,7 +1,6 @@
 <template>
   <p v-show="news.length < 1 && !connection_error" class="text-white mt-5 px-3 pt-3 lg:text-center">
-    Hie! I use an unconventional way to get news from <a href="//zero.pindula.co.zw">pindula</a> so
-    please give me a few seconds to load.
+    <Loader />
   </p>
   <p v-show="connection_error && news.length < 1" class="text-white mt-5 px-3 pt-3 lg:text-center">
     An error occured connecting to the server. <a @click="fetchNews()">Retry</a>
@@ -18,9 +17,12 @@
   </section>
 </template>
 <script>
-
+import Loader from './Loader.vue'
 export default {
   name: 'News',
+  Components: {
+    Loader,
+  }
   methods: {
     fetchNews() {
       fetch(atob(this.news_url))

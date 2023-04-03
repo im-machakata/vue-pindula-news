@@ -1,6 +1,10 @@
 <template>
-  <p v-show="news.length < 1 && !connection_error" class="text-white mt-5 px-3 pt-3 lg:text-center">
-    <Loader></Loader>
+  <p v-show="news.length < 1 && !connection_error" class="text-white mt-5 px-3 pt-3 lg:text-center">   
+    <div class="flex items-center justify-center space-x-2">
+      <div class="w-4 h-4 rounded-full animate-pulse bg-white dark:bg-violet-400"></div>
+      <div class="w-4 h-4 rounded-full animate-pulse bg-white dark:bg-violet-400"></div>
+      <div class="w-4 h-4 rounded-full animate-pulse bg-white dark:bg-violet-400"></div>
+    </div>
   </p>
   <p v-show="connection_error && news.length < 1" class="text-white mt-5 px-3 pt-3 lg:text-center">
     An error occured connecting to the server. <a @click="fetchNews()">Retry</a>
@@ -17,12 +21,8 @@
   </section>
 </template>
 <script>
-import Loader from './Loader.vue'
 export default {
   name: 'News',
-  components: {
-    Loader
-  },
   methods: {
     fetchNews() {
       fetch(atob(this.news_url))

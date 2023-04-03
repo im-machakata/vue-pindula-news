@@ -16,7 +16,7 @@
     An error occured connecting to the server. <a @click="fetchNews()">Retry</a>
   </p>
   <section class="news-list">
-    <div v-for="(item , index) in news" :class="(item.is_open ? '' : 'closed' ) + 'news-item'" :key="item.id" @click="toggleOpen(index)">
+    <div v-for="(item , index) in news" class="news-item"  :class="{closed: item.is_open}" :key="item.id" @click="toggleOpen(index)">
       <img class="news-image" v-bind:src="item.image_src">
       <div>
         <a class="news-title" v-bind:title="item.title" target="_blank" v-bind:href="'//zero.pindula.co.zw/'+item.slug">{{ item.title }}</a>
@@ -31,7 +31,7 @@ export default {
   name: 'News',
   methods: {
     toggleOpen(index) {
-      this.news[index] = !this.news[index].is_open;
+      this.news[index].is_open = !this.news[index].is_open;
     },
     fetchNews() {
       fetch(atob(this.news_url))

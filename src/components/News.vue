@@ -1,6 +1,6 @@
 <template>
   <p v-show="news.length < 1 && !connection_error" class="text-white mt-5 px-3 pt-3 lg:text-center">   
-    <div aria-label="Loading..." role="status">
+    <div aria-label="Loading..." role="status" class="loader">
       <svg class="h-6 w-6 animate-spin" viewBox="3 3 18 18">
         <path
           class="fill-indigo-200"
@@ -61,7 +61,9 @@ export default {
 img {
   height: 200px;
 }
-
+.loader {
+  height: 100px;
+}
 .news-item.closed .news-title {
 
   display: -webkit-box;

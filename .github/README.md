@@ -33,11 +33,6 @@ Since it's just a small project most of the features will / might be introduced 
 
 I probably won't do anything more than this.
 
-### Endpoints
-
-|Trending Posts|`https://zero.pindula.co.zw/api/posts/popular?version=2`|
-|--|--|
-
 ## Collaborations
 
 Well, that's pretty much the reason why I open sourced it, go ahead and grab a fork!

@@ -20,16 +20,16 @@
     @apply px-4 py-2 lg:px-6 lg:py-4 grid gap-y-3 gap-x-2 grid-cols-1 md:grid-cols-2 md:gap-x-4 mt-3 lg:grid-cols-3 xl:grid-cols-4 lg:gap-x-6;
   }
   .news-item {
-    @apply text-left text-blue-100 border-2 border-blue-700 shadow hover:shadow-md rounded-md mb-5 mt-2 md:mt-0 cursor-pointer transition-all duration-300;
-  }
-  .news-item.closed { 
-    @apply transition-all duration-500;
+    @apply text-left text-blue-100 border-2 border-blue-700 shadow hover:shadow-lg rounded-md mb-5 mt-2 md:mt-0 cursor-pointer transition-all duration-300;
   }
   blockquote { 
     @apply bg-blue-700 p-3 rounded-lg border-t-8 my-3;
   }
-  .news-item div {
-    @apply px-3 pb-4 pt-3 bg-blue-900 rounded-b-md mt-0;
+  .news-item .details {
+    @apply px-3 pb-4 pt-3 bg-blue-900 rounded-b-md mt-0 ;
+  }
+  .post-meta-info {
+    @apply bg-white text-blue-700 px-2 py-1 rounded mr-2 mb-1;
   }
   .news-image {
     @apply bg-cyan-50 rounded-md mb-1 shadow-lg text-center w-full object-cover scale-105 hover:shadow-xl hover:duration-500 transition-all duration-300 hover:transition-all;

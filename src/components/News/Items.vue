@@ -1,10 +1,11 @@
 <template>
   <section class="news-list">
     <article class="news-item closed" v-for="( item, index) in news" :key="item.id"
-      @click="this.$emit('read-article',index,item)">
+      @click="this.$emit('read-article', index)">
       <img class="news-image" v-bind:src="item.image_src" v-bind:alt="item.image_caption" v-bind:title="item.slug">
       <div class="details">
-        <a class="news-title" :class="{ closed: !item.is_open }" @click.stop="item.is_open = !item.is_open" v-bind:title="item.title">{{ item.title }}</a>
+        <a class="news-title" :class="{ closed: !item.is_open }" @click.stop="item.is_open = !item.is_open"
+          v-bind:title="item.title">{{ item.title }}</a>
         <p class="text-sm font-sans">
         <div class="flex flex-row flex-wrap my-1">
           <div class="post-meta-info">
@@ -34,7 +35,7 @@
 </template>
 <script>
 export default {
-  name: 'NewsItem',
+  name: 'NewsItems',
   props: {
     news: Array
   },

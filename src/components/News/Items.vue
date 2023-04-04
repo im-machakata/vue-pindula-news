@@ -1,7 +1,7 @@
 <template>
   <section class="news-list">
     <article class="news-item closed" v-for="( item, index) in news" :key="item.id"
-      @click="this.$emit('read-article', index)">
+      @click="this.$emit('read-article',index,item)">
       <img class="news-image" v-bind:src="item.image_src" v-bind:alt="item.image_caption" v-bind:title="item.slug">
       <div class="details">
         <a class="news-title" :class="{ closed: !item.is_open }" @click="item.is_open = !item.is_open" v-bind:title="item.title">{{ item.title }}</a>
@@ -21,7 +21,7 @@
           </div>
           <div class="post-meta-info">
             <i class="fa fa-tags mr-1" aria-hidden="true"></i>
-            <span v-html="getCategory(item.category.name)"></span>
+            <span v-html="get_category(item.category.name)"></span>
           </div>
         </div>
         </p>
@@ -39,14 +39,17 @@ export default {
     news: Array
   },
   methods: {
-    getCategory(value) {
+    get_category(value) {
       if (value.includes("/")) {
         value = value.split('/');
         return value[0];
       }
       return value;
     }
-  }
+  },
+  emits: [
+    'read-article'
+  ]
 }
 </script>
 <style scoped>

@@ -3,7 +3,7 @@
   <section v-show="connection_error && !is_loading" class="text-white my-5 px-3 py-3 lg:text-center">
     An error occured connecting to the server. <a @click="load_news()" class="hover:underline">Retry</a>
   </section>
-  <NewsItem :news="latest_news" v-show="has_news" @read-article="toggle_expand_news(index)"></NewsItem>
+  <NewsItem :news="latest_news" v-show="has_news" @read-article="toggle_expand_news"></NewsItem>
   <NewsArticle></NewsArticle>
 </template>
 <script>
@@ -23,8 +23,8 @@ export default {
     },
   },
   methods: {
-    toggle_expand_news(index) {
-      this.latest_news[index].is_open = !this.latest_news[index].is_open;
+    toggle_expand_news(index,item) {
+      console.log(index,item);
     },
     load_news() {
       this.is_loading = true;

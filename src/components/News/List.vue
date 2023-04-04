@@ -4,7 +4,7 @@
     An error occured connecting to the server. <a @click="load_news()" class="hover:underline">Retry</a>
   </section>
   <NewsItem :news="latest_news" v-show="has_news" @read-article="toggle_expand_news"></NewsItem>
-  <NewsArticle></NewsArticle>
+  <NewsArticle v-show="read_article"></NewsArticle>
 </template>
 <script>
 import NewsArticle from "./Article.vue"
@@ -25,6 +25,7 @@ export default {
   methods: {
     toggle_expand_news(index, item) {
       alert(`Working on displaying article`);
+      this.read_article = this.latest_news[index];
     },
     load_news() {
       this.is_loading = true;
@@ -46,6 +47,7 @@ export default {
       latest_news: Array(),
       is_loading: true,
       connection_error: false,
+      read_article: false,
       latest_news_url: 'aHR0cHM6Ly9hcGkuc2NyYXBpbmdhbnQuY29tL3YyL2dlbmVyYWw/dXJsPWh0dHBzJTNBJTJGJTJGemVyby5waW5kdWxhLmNvLnp3JTJGYXBpJTJGcG9zdHMmeC1hcGkta2V5PTc2MmIxMjcxMWM3MDRiMzZhZjRjZWZjMWU0OTM4MmExJmJyb3dzZXI9ZmFsc2U=',
       ads_url: 'aHR0cHM6Ly9hcGkuc2NyYXBpbmdhbnQuY29tL3YyL2dlbmVyYWw/dXJsPWh0dHBzJTNBJTJGJTJGemVyby5waW5kdWxhLmNvLnp3JTJGYXBpJTJGcHJvZHVjdHMmeC1hcGkta2V5PTc2MmIxMjcxMWM3MDRiMzZhZjRjZWZjMWU0OTM4MmExJmJyb3dzZXI9ZmFsc2U='
     }

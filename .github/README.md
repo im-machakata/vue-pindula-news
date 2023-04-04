@@ -2,15 +2,17 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/049d18d1-b803-4b09-9805-c60d76f22963/deploy-status)][deploy-status]
 
-*I used [Scraping Ant](//scrapingant.com) to fetch News, Jobs & Market Products. These guys offer 10,000 free credits per month, which I thought was more than enough for a project this small. I'd appreciate it if you do not abuse my credits for other uses, but rather create your own account if you need their services. Aw and one more thing, I am not paid by [Scraping Ant](scrapingant.com) for any of this.*
+## Disclaimer 
+
+*I used [Scraping Ant](//scrapingant.com) to fetch News, Jobs & Market Products. These guys offer 10,000 free credits per month, which I thought were more than enough for a project this small. I'd appreciate it if you do not abuse my credits for other uses, but rather create your own account if you need their services. Aw and one more thing, I am not paid by [Scraping Ant](scrapingant.com) for any of this.*
 
 ---
 
 ## About
 
-While learning Vue JS 3, I decided to make a small clone project of our popular local news site [Pindula](//zero.pindula.co.zw).
+So while learning Vue JS 3 & Tailwind, I decided to make a small clone project of our popular local news site [Pindula](//zero.pindula.co.zw).
 
-**NB**: I am still learning hos to restructure & refactor the codebase though.
+**NB**: I am still learning how to restructure & refactor the codebase though.
 
 ## Features
 

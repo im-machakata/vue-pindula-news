@@ -23,8 +23,8 @@ export default {
     },
   },
   methods: {
-    toggle_expand_news(index,item) {
-      console.log(index,item);
+    toggle_expand_news(index, item) {
+      alert(`Working on displaying article`);
     },
     load_news() {
       this.is_loading = true;

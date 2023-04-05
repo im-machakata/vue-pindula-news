@@ -4,16 +4,19 @@
 @tailwind utilities;
 
 @layer components {
-  a {
-    @apply cursor-pointer text-blue-300 ;
+  .news-item a {
+    @apply cursor-pointer text-blue-300;
   }
-  nav a {
-    @apply cursor-pointer text-white ;
+  a:is(header, .news-item, footer) {
+    @apply cursor-pointer text-white;
+  }
+  .pill {
+    @apply my-2 block rounded bg-neutral-100 px-7 pt-4 pb-3.5 text-xs font-medium uppercase leading-tight text-neutral-500 md:mr-4 cursor-pointer;
   }
   body {
     @apply bg-blue-900;
   }
-  .loader{
+  .loader {
     @apply flex justify-center;
   }
   .news-list {
@@ -22,14 +25,14 @@
   .news-item {
     @apply text-left text-blue-100 border-2 border-blue-700 shadow hover:shadow-lg rounded-md mb-5 mt-2 md:mt-0 cursor-pointer transition-all duration-300;
   }
-  blockquote { 
+  .news-item blockquote {
     @apply bg-blue-700 p-3 rounded-lg border-t-8 my-3;
   }
   .news-item .details {
-    @apply px-3 pb-4 pt-3 bg-blue-900 rounded-b-md mt-0 ;
+    @apply px-3 pb-4 pt-3 bg-blue-900 rounded-b-md mt-0;
   }
   .post-meta-info {
-    @apply bg-white text-blue-700 px-2 py-1 rounded mr-2 mb-1;
+    @apply bg-white text-blue-700 px-2 py-1 rounded mr-1 mb-1;
   }
   .news-image {
     @apply bg-cyan-50 rounded-md mb-1 shadow-lg text-center w-full object-cover scale-105 hover:shadow-xl hover:duration-500 transition-all duration-300 hover:transition-all;
@@ -38,9 +41,12 @@
     @apply text-xl font-semibold font-serif mb-1 hover:text-blue-200;
   }
   .page-footer {
-    @apply border-t-2 border-blue-700 py-4 font-sans w-full bg-blue-900 text-white text-center;
+    @apply border-t-2 border-blue-700;
   }
   .news-article {
     @apply bottom-0;
+  }
+  .social-link {
+    @apply m-1 p-2 rounded-full border-2 flex justify-center my-auto border-white uppercase leading-normal text-white transition duration-150 ease-in-out hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0;
   }
 }

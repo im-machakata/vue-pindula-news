@@ -1,7 +1,8 @@
 <template>
     <header class="text-center mt-12">
         <a href="/" class="logo rounded font-serif bg-white font-bold text-blue-600 text-8xl px-6 relative shadow-md md:py-1 select-none">P</a>
-        <h1 class="title font-sans text-3xl mt-6 mb-5 text-white font-extrabold">{{ msg }}</h1>
+        <h1 class="title font-sans text-3xl mt-6 text-white font-extrabold">{{ msg }}</h1>
+        <p class="text-white mb-5">Learn something new everyday.</p>
     </header>
 </template>
 <script>

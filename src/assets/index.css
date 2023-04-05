@@ -10,7 +10,7 @@
     @apply cursor-pointer text-blue-300;
   }
   .pill {
-    @apply my-2 block rounded bg-neutral-100 px-7 pt-4 pb-3.5 text-xs font-medium uppercase leading-tight text-neutral-500 md:mr-4 cursor-pointer;
+    @apply my-2 block rounded bg-neutral-100 px-7 pt-4 pb-3.5 text-xs font-medium uppercase leading-tight text-neutral-600 hover:text-neutral-800 cursor-pointer transition-all duration-100 text-center;
   }
   body {
     @apply bg-blue-900;

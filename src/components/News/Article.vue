@@ -1,5 +1,5 @@
 <template>
-  <aside class="read-article relative z-10 text-white w-full top-0 left-0">
+  <aside class="read-article relative z-10 text-white w-full top-0 left-0" @click.self="this.$emit('close-article')">
     <div class="relative z-10" aria-labelledby="modal-title" role="dialog" aria-modal="true">
       <!--
     Background backdrop, show/hide based on modal state.
@@ -48,6 +48,7 @@ export default {
   components: {
     Comments
   },
-  props: ['news']
+  props: ['news'],
+  emits: ['close-article']
 }
 </script>

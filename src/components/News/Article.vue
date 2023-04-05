@@ -29,9 +29,9 @@
             class="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg z-30">
             <div class="container p-4 text-black">
               <div class="flex justify-center">
-                <span class="py-1 w-40 bg-blue-400 hover:bg-blue-600 transition-all rounded-lg"></span>
+                <span class="py-1 w-40 bg-blue-400 hover:bg-blue-600 transition-all rounded-lg my-2"></span>
               </div>
-              <h2 class="news-title text-blue-900 hover:text-blue-900" v-bind:title="news?.title">{{ news?.title }}</h2>
+              <h2 class="news-title text-blue-900 hover:text-blue-900" v-bind:title="news.title">{{ news.title }}</h2>
               <p v-html="news.content"></p>
             </div>
           </div>

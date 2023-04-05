@@ -4,7 +4,7 @@
       @click="this.$emit('read-article', item)">
       <img class="news-image" v-bind:src="item.image_src" v-bind:alt="item.image_caption" v-bind:title="item.slug">
       <div class="details">
-        <a class="news-title" :class="{ closed: !item.is_open }" @click.stop="item.is_open = !item.is_open"
+        <a class="news-title mb-1" :class="{ closed: !item.is_open }" @click.stop="item.is_open = !item.is_open"
           v-bind:title="item.title">{{ item.title }}</a>
         <p class="text-sm font-sans">
         <div class="flex flex-row flex-wrap my-1">

@@ -9,11 +9,11 @@
       <div class="flex justify-center mb-2">
         <div class="py-1 bg-blue-400 rounded-lg w-32"></div>
       </div>
-      <h2 class="text-3xl lg:pl-1" v-bind:title="news.title">{{ news.title }}</h2>
-      <a :href="'//zero.pindula.co.zw/' + news.slug" class="pb-2 whitespace-pre-wrap" target="_blank">
+      <h2 class="text-3xl" v-bind:title="news.title">{{ news.title }}</h2>
+      <a :href="'//zero.pindula.co.zw/' + news.slug" class="pb-2" target="_blank">
         https://zero.pindula.co.zw/{{ news.slug }}</a>
       <div class="overflow-y-scroll max-w-full rounded-md pr-2 pb-8">
-        <p v-html="news.content" class="mt-2"></p>
+        <p v-html="news.content"></p>
       </div>
     </div>
     <!-- <Comments></Comments> -->

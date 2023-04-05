@@ -4,10 +4,12 @@
 @tailwind utilities;
 
 @layer components {
+  a {
+    @apply cursor-pointer;
+  }
   .news-item a,
-  .dialog a,
   footer a {
-    @apply cursor-pointer text-blue-300;
+    @apply text-blue-300;
   }
   .pill {
     @apply my-2 block rounded bg-neutral-100 px-7 pt-4 pb-3.5 text-xs font-medium uppercase leading-tight text-neutral-600 hover:text-neutral-800 cursor-pointer transition-all duration-100 text-center;
@@ -24,8 +26,8 @@
   .news-item {
     @apply text-left text-blue-100 border-2 border-blue-700 shadow hover:shadow-lg rounded-md mb-5 mt-2 md:mt-0 cursor-pointer transition-all duration-300;
   }
-  .news-item blockquote, .dialog blockquote {
-    @apply bg-blue-200 p-3 rounded-lg border-l-8 my-3;
+  blockquote {
+    @apply bg-blue-200 p-3 rounded border-l-8 border-l-blue-500 my-3;
   }
   .news-item .details {
     @apply px-3 pb-4 pt-3 bg-blue-900 rounded-b-md mt-0;
@@ -40,7 +42,10 @@
     @apply text-xl font-semibold font-serif hover:text-blue-200;
   }
   .dialog {
-    @apply fixed bottom-0 left-0 right-0 z-[1045] flex max-w-full translate-y-full flex-col border-none bg-white bg-clip-padding shadow-sm outline-none transition duration-300 ease-in-out transform-none px-6 pt-8 rounded-t-3xl overflow-y-scroll;
+    @apply fixed bottom-0 left-0 right-0 z-[1045] flex flex-col bg-white shadow-lg transition duration-300 ease-in-out px-6 pt-6 rounded-t-3xl mx-4 md:mx-0;
+  }
+  .dialog a {
+    @apply text-blue-600;
   }
   .page-footer {
     @apply border-t-2 border-blue-700;

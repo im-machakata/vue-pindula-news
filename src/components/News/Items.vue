@@ -1,7 +1,7 @@
 <template>
   <section class="news-list">
     <article class="news-item closed" v-for="( item, index) in news" :key="item.id"
-      @click="this.$emit('read-article', index)">
+      @click="this.$emit('read-article', item)">
       <img class="news-image" v-bind:src="item.image_src" v-bind:alt="item.image_caption" v-bind:title="item.slug">
       <div class="details">
         <a class="news-title" :class="{ closed: !item.is_open }" @click.stop="item.is_open = !item.is_open"

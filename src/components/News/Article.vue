@@ -10,10 +10,10 @@
         <div class="py-1 bg-blue-400 rounded-lg w-32"></div>
       </div>
       <h2 class="text-3xl" v-bind:title="news.title">{{ news.title }}</h2>
-      <a :href="'//zero.pindula.co.zw/' + news.slug" target="_blank">
+      <a :href="'//zero.pindula.co.zw/' + news.slug" class="pb-2" target="_blank">
         https://zero.pindula.co.zw/{{ news.slug }}</a>
       <div class="overflow-y-scroll max-w-full rounded-md pr-2 pb-8">
-        <p v-html="news.content" class="mt-4"></p>
+        <p v-html="news.content" class="mt-2"></p>
       </div>
     </div>
     <!-- <Comments></Comments> -->

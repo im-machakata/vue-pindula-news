@@ -616,6 +616,7 @@ body {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   transform: none;
   flex-direction: column;
+  overflow-y: scroll;
   border-top-left-radius: 1.5rem;
   border-top-right-radius: 1.5rem;
   border-style: none;
@@ -776,9 +777,6 @@ body {
 }
 .justify-around {
   justify-content: space-around;
-}
-.gap-5 {
-  gap: 1.25rem;
 }
 .gap-8 {
   gap: 2rem;

@@ -1,10 +1,10 @@
 <template>
-  <Loader v-show="is_loading"></Loader>
   <section v-show="connection_error && !is_loading" class="text-white my-5 px-3 py-3 lg:text-center">
     An error occured connecting to the server. <a @click="load_news()" class="hover:underline">Retry</a>
   </section>
   <NewsItems :news="latest_news.results" v-show="has_news" @read-article="read_article"></NewsItems>
   <NewsArticle v-show="view_article" :news="view_article" @close-article="view_article = false"></NewsArticle>
+  <Loader v-show="is_loading"></Loader>
   <Pagination :next="latest_news.next" :previous="latest_news.previous" @previous-page="load_news" @next-page="load_news"></Pagination>
 </template>
 <script>

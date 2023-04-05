@@ -7,7 +7,7 @@
   .news-item a {
     @apply cursor-pointer text-blue-300;
   }
-  a:is(header, .news-item, footer) {
+  main a {
     @apply cursor-pointer text-white;
   }
   .pill {

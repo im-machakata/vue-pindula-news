@@ -538,9 +538,9 @@ body {
   margin-top: 0.75rem;
   margin-bottom: 0.75rem;
   border-radius: 0.5rem;
-  border-top-width: 8px;
+  border-left-width: 8px;
   --tw-bg-opacity: 1;
-  background-color: rgb(29 78 216 / var(--tw-bg-opacity));
+  background-color: rgb(191 219 254 / var(--tw-bg-opacity));
   padding: 0.75rem;
 }
 .news-item .details {
@@ -894,30 +894,25 @@ body {
 .delay-75 {
   transition-delay: 75ms;
 }
-
 .hover\:text-blue-900:hover {
   --tw-text-opacity: 1;
   color: rgb(30 58 138 / var(--tw-text-opacity));
 }
-
 .hover\:underline:hover {
   text-decoration-line: underline;
 }
-
 @media (prefers-color-scheme: dark) {
   .dark\:bg-blue-200 {
     --tw-bg-opacity: 1;
     background-color: rgb(191 219 254 / var(--tw-bg-opacity));
   }
 }
-
 @media (min-width: 768px) {
   .md\:py-1 {
     padding-top: 0.25rem;
     padding-bottom: 0.25rem;
   }
 }
-
 @media (min-width: 1024px) {
   .lg\:mr-10 {
     margin-right: 2.5rem;

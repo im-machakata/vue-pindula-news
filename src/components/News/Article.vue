@@ -1,5 +1,5 @@
 <template>
-  <aside class="read-article relative z-10 text-white w-full top-0 left-0" @click.self="this.$emit('close-article')">
+  <aside class="read-article relative z-10 text-white w-full top-0 left-0" @click="this.$emit('close-article')">
     <div class="relative z-10" aria-labelledby="modal-title" role="dialog" aria-modal="true">
       <!--
     Background backdrop, show/hide based on modal state.

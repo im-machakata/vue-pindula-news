@@ -939,6 +939,9 @@ body {
 .delay-75 {
   transition-delay: 75ms;
 }
+.delay-300 {
+  transition-delay: 300ms;
+}
 .duration-150 {
   transition-duration: 150ms;
 }

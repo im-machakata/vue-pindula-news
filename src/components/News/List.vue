@@ -55,6 +55,9 @@ export default {
           // hide error message & loader
           this.connection_error = false;
           this.is_loading = false;
+
+          // scroll to top
+          window.scrollTo(0,0);
         })
 
         // show error message

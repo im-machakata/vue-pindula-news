@@ -5,7 +5,8 @@
     An error occured connecting to the server. <a @click="load_news()" class="hover:underline">Retry</a>
   </section>
   <Loader v-show="is_loading"></Loader>
-  <Pagination :next="latest_news.next" :previous="latest_news.previous" @previous-page="load_news" @next-page="load_news"></Pagination>
+  <Pagination :next="latest_news.next" :previous="latest_news.previous" @previous-page="load_news" @next-page="load_news">
+  </Pagination>
 </template>
 <script>
 import NewsArticle from "./Article.vue"
@@ -33,9 +34,16 @@ export default {
       // show loader until done
       this.is_loading = true;
 
-      // set url
-      url = !url ? atob(this.urls.news) : url;
-      url = atob(this.urls.proxy) + encodeURI(url);
+      if (!this.current_url) {
+        // set url when empty
+        url = !url ? atob(this.urls.news) : url;
+        url = atob(this.urls.proxy) + encodeURI(url);
+
+        // set current url incase of retries
+        this.current_url = url;
+      } else {
+        url = this.current_url;
+      }
 
       // fetch news items
       fetch(url)
@@ -57,7 +65,7 @@ export default {
           this.is_loading = false;
 
           // scroll to top
-          window.scrollTo(0,0);
+          window.scrollTo(0, 0);
         })
 
         // show error message
@@ -75,6 +83,7 @@ export default {
       is_loading: true,
       view_article: false,
       connection_error: false,
+      current_url: null,
       urls: {
         ads: 'aHR0cHM6Ly96ZXJvLnBpbmR1bGEuY28uencvYXBpL3Byb2R1Y3RzLw==',
         news: 'aHR0cHM6Ly96ZXJvLnBpbmR1bGEuY28uencvYXBpL3Bvc3RzLw==',

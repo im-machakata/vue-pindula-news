@@ -27,10 +27,10 @@
     @apply text-left text-blue-100 border-2 border-blue-700 shadow hover:shadow-lg rounded-md mb-5 mt-2 md:mt-0 cursor-pointer transition-all duration-300;
   }
   blockquote {
-    @apply bg-blue-200 p-3 rounded border-l-8 border-l-blue-500 my-3;
+    @apply bg-blue-100 p-3 rounded my-3;
   }
   .news-item .details {
-    @apply px-3 pb-4 pt-3 bg-blue-900 rounded-b-md mt-0;
+    @apply px-3 pb-4 pt-3 bg-blue-900 rounded-b-md mt-0 lg:text-xl;
   }
   .post-meta-info {
     @apply bg-white text-blue-700 px-2 py-1 rounded mr-1 mb-1;

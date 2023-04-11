@@ -539,11 +539,8 @@ blockquote {
   margin-top: 0.75rem;
   margin-bottom: 0.75rem;
   border-radius: 0.25rem;
-  border-left-width: 8px;
-  --tw-border-opacity: 1;
-  border-left-color: rgb(59 130 246 / var(--tw-border-opacity));
   --tw-bg-opacity: 1;
-  background-color: rgb(191 219 254 / var(--tw-bg-opacity));
+  background-color: rgb(219 234 254 / var(--tw-bg-opacity));
   padding: 0.75rem;
 }
 .news-item .details {
@@ -556,6 +553,12 @@ blockquote {
   padding-right: 0.75rem;
   padding-bottom: 1rem;
   padding-top: 0.75rem;
+}
+@media (min-width: 1024px) {
+  .news-item .details {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
 }
 .post-meta-info {
   margin-right: 0.25rem;
@@ -686,11 +689,17 @@ blockquote {
 .relative {
   position: relative;
 }
+.sticky {
+  position: sticky;
+}
 .inset-0 {
   top: 0px;
   right: 0px;
   bottom: 0px;
   left: 0px;
+}
+.bottom-0 {
+  bottom: 0px;
 }
 .z-40 {
   z-index: 40;
@@ -728,9 +737,6 @@ blockquote {
 }
 .mt-12 {
   margin-top: 3rem;
-}
-.mt-2 {
-  margin-top: 0.5rem;
 }
 .mt-6 {
   margin-top: 1.5rem;
@@ -804,9 +810,6 @@ blockquote {
 .overflow-y-scroll {
   overflow-y: scroll;
 }
-.whitespace-pre-wrap {
-  white-space: pre-wrap;
-}
 .rounded {
   border-radius: 0.25rem;
 }
@@ -878,9 +881,6 @@ blockquote {
 }
 .pb-8 {
   padding-bottom: 2rem;
-}
-.pl-1 {
-  padding-left: 0.25rem;
 }
 .pr-2 {
   padding-right: 0.5rem;
@@ -959,12 +959,6 @@ blockquote {
 @media (min-width: 1024px) {
   .lg\:mr-10 {
     margin-right: 2.5rem;
-  }
-  .lg\:pl-1 {
-    padding-left: 0.25rem;
-  }
-  .lg\:pl-2 {
-    padding-left: 0.5rem;
   }
   .lg\:text-center {
     text-align: center;

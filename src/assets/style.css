@@ -689,17 +689,11 @@ blockquote {
 .relative {
   position: relative;
 }
-.sticky {
-  position: sticky;
-}
 .inset-0 {
   top: 0px;
   right: 0px;
   bottom: 0px;
   left: 0px;
-}
-.bottom-0 {
-  bottom: 0px;
 }
 .z-40 {
   z-index: 40;

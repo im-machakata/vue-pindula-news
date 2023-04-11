@@ -6,10 +6,10 @@
 </template>
 
 <script>
-import Menu from './components/Menu.vue'
-import Header from './components/Header.vue'
-import NewsList from './components/News/List.vue'
-import Footer from './components/Footer.vue'
+import Menu from '../components/Menu.vue'
+import Header from '../components/Header.vue'
+import NewsList from '../components/News/List.vue'
+import Footer from '../components/Footer.vue'
 
 export default {
   name: 'App',

@@ -52,7 +52,6 @@ export default {
 
                     // show error message & hide loader
                     this.connection_error = true;
-                    this.is_loading = false;
 
                     // try after 4 secs
                     setTimeout(this.load_comments, 4000);

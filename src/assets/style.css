@@ -760,6 +760,9 @@ blockquote {
 .mb-6 {
   margin-bottom: 1.5rem;
 }
+.ml-1 {
+  margin-left: 0.25rem;
+}
 .ml-2 {
   margin-left: 0.5rem;
 }
@@ -775,8 +778,8 @@ blockquote {
 .mt-6 {
   margin-top: 1.5rem;
 }
-.ml-1 {
-  margin-left: 0.25rem;
+.mr-0 {
+  margin-right: 0px;
 }
 .flex {
   display: flex;
@@ -872,6 +875,12 @@ blockquote {
   border-top-width: 2px;
   border-bottom-width: 2px;
 }
+.border-t {
+  border-top-width: 1px;
+}
+.border-l {
+  border-left-width: 1px;
+}
 .border-blue-700 {
   --tw-border-opacity: 1;
   border-color: rgb(29 78 216 / var(--tw-border-opacity));
@@ -922,8 +931,8 @@ blockquote {
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
-.pb-2 {
-  padding-bottom: 0.5rem;
+.pb-3 {
+  padding-bottom: 0.75rem;
 }
 .pb-4 {
   padding-bottom: 1rem;
@@ -939,6 +948,12 @@ blockquote {
 }
 .pt-6 {
   padding-top: 1.5rem;
+}
+.pl-2 {
+  padding-left: 0.5rem;
+}
+.pl-1 {
+  padding-left: 0.25rem;
 }
 .text-center {
   text-align: center;

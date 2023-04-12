@@ -97,7 +97,7 @@ export default {
       urls: {
         ads: 'aHR0cHM6Ly96ZXJvLnBpbmR1bGEuY28uencvYXBpL3Byb2R1Y3RzLw==',
         news: 'aHR0cHM6Ly96ZXJvLnBpbmR1bGEuY28uencvYXBpL3Bvc3RzLw==',
-        proxy: 'aHR0cHM6Ly9hcGkuc2NyYXBpbmdhbnQuY29tL3YyL2dlbmVyYWw/eC1hcGkta2V5PTc2MmIxMjcxMWM3MDRiMzZhZjRjZWZjMWU0OTM4MmExJmJyb3dzZXI9ZmFsc2UmdXJsPQ=='
+        proxy: 'aHR0cHM6Ly9hcGkuc2NyYXBpbmdhbnQuY29tL3YyL2dlbmVyYWw/eC1hcGkta2V5PWVmMmY4ZjQwZTdlYTQ5NTk5NGYwYTg5ZWUxODkwOGY1JmJyb3dzZXI9ZmFsc2UmdXJsPQ=='
       }
     }
   },

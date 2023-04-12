@@ -1,17 +1,21 @@
 <template>
-    <section class="comments text-white">
+    <section class="comments text-white overflow-y-visible" v-for="comment in comments" :key="comment.id">
+        <CommentItem :comment="comment"></CommentItem>
     </section>
 </template>
 <script>
-
+import CommentItem from './Item.vue';
 export default {
     name: 'Comments',
     props: ['slug'],
+    components: {
+        CommentItem
+    },
     data() {
         return {
             urls: {
                 comments: 'aHR0cHM6Ly96ZXJvLnBpbmR1bGEuY28uencvYXBpL2Rpc2N1c3Npb25zL2NvbW1lbnRzP3ZlcnNpb249MyZzbHVnPQ==',
-                proxy: 'aHR0cHM6Ly9hcGkuc2NyYXBpbmdhbnQuY29tL3YyL2dlbmVyYWw/eC1hcGkta2V5PTc2MmIxMjcxMWM3MDRiMzZhZjRjZWZjMWU0OTM4MmExJmJyb3dzZXI9ZmFsc2UmdXJsPQ=='
+                proxy: 'aHR0cHM6Ly9hcGkuc2NyYXBpbmdhbnQuY29tL3YyL2dlbmVyYWw/eC1hcGkta2V5PWVmMmY4ZjQwZTdlYTQ5NTk5NGYwYTg5ZWUxODkwOGY1JmJyb3dzZXI9ZmFsc2UmdXJsPQ=='
             },
             comments: [],
             connection_error: false,
@@ -24,7 +28,7 @@ export default {
             // set url
             let url = atob(this.urls.proxy) + encodeURIComponent(atob(this.urls.comments) + this.slug);
 
-            console.log(encodeURIComponent(atob(this.urls.comments) + this.slug));
+            console.log(url);
             // fetch news items
             fetch(url)
 
@@ -33,13 +37,10 @@ export default {
 
                 // process the results
                 .then(response => {
-                    console.log(results);
 
                     // store response in the local variable
-                    this.comments = response;
-
-                    // add an is_open key 
-                    this.comments.results = response;
+                    this.comments = response.results;
+                    console.log(this.comments);
 
                     // hide error message & loader
                     this.connection_error = false;
@@ -56,9 +57,6 @@ export default {
         }
     },
     async created() {
-        // fetch();
-        // aHR0cHM6Ly96ZXJvLnBpbmR1bGEuY28uencvYXBpL2Rpc2N1c3Npb25zL2NvbW1lbnRzP3NsdWc9
-        // https://zero.pindula.co.zw/api/discussions/comments?slug=article-slug-url&version=3
         await this.load_comments();
     }
 }

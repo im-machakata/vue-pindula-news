@@ -1,16 +1,19 @@
 <template>
     <section class="comments overflow-y-visible">
+        <div v-show="is_loading" class="mb-4">Loading comments...</div>
         <h2 v-if="comments?.length > 0" class="mt-6 font-bold text-xl">Comments</h2>
         <CommentItem :comment="comment" v-for="comment in comments" :key="comment.id"></CommentItem>
     </section>
 </template>
 <script>
 import CommentItem from './Item.vue';
+import Loader from '../Loader.vue';
 export default {
     name: 'Comments',
     props: ['slug'],
     components: {
-        CommentItem
+        CommentItem,
+        Loader
     },
     data() {
         return {
@@ -29,7 +32,6 @@ export default {
             // set url
             let url = atob(this.urls.proxy) + encodeURIComponent(atob(this.urls.comments) + this.slug);
 
-            console.log(url);
             // fetch news items
             fetch(url)
 
@@ -54,6 +56,9 @@ export default {
                     // show error message & hide loader
                     this.connection_error = true;
                     this.is_loading = false;
+
+                    // try after 4 secs
+                    setTimeout(this.load_comments, 4000);
                 });
         }
     },

@@ -942,21 +942,45 @@ blockquote {
 .delay-75 {
   transition-delay: 75ms;
 }
+
+
+::-webkit-scrollbar {
+  width: 0.5em;
+  height: 0.4em;
+  background: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c6c6c6;
+  height: 0;
+  width: 0.75em;
+  border-radius: 0.2em;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a0a0a0;
+  -webkit-transition: ease 0.4s;
+  transition: ease 0.4s;
+}
+
 .hover\:underline:hover {
   text-decoration-line: underline;
 }
+
 @media (prefers-color-scheme: dark) {
   .dark\:bg-blue-200 {
     --tw-bg-opacity: 1;
     background-color: rgb(191 219 254 / var(--tw-bg-opacity));
   }
 }
+
 @media (min-width: 768px) {
   .md\:py-1 {
     padding-top: 0.25rem;
     padding-bottom: 0.25rem;
   }
 }
+
 @media (min-width: 1024px) {
   .lg\:mx-2 {
     margin-left: 0.5rem;

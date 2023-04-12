@@ -60,3 +60,22 @@
     @apply m-1 p-2 rounded-full border-2 flex justify-center my-auto border-white uppercase leading-normal text-white transition duration-150 ease-in-out hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0;
   }
 }
+
+
+::-webkit-scrollbar {
+  width: 0.5em;
+  height: 0.4em;
+  background: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c6c6c6;
+  height: 0;
+  width: 0.75em;
+  border-radius: 0.2em;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a0a0a0;
+  transition: ease 0.4s;
+}

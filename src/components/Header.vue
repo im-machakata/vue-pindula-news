@@ -26,6 +26,10 @@ a {
 width: 200px;
 height: 200px;
 }
+.font-serif {
+    font-family: serif;
+}
+
 img {
     border-radius: 0.5em;
     padding: 12px 8px 6px 8px;

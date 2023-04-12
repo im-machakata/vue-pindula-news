@@ -4,6 +4,9 @@ module.exports = {
   darkMode: 'media', // or 'media' or 'class'
   theme: {
     extend: {},
+    fontFamily:{
+      'serif': ['"Newsreader"', ...defaultTheme.fontFamily.serif]
+    }
   },
   variants: {
     extend: {},

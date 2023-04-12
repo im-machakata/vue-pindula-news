@@ -5,7 +5,8 @@
     An error occured connecting to the server. <a @click="load_news()" class="hover:underline">Retry</a>
   </section>
   <Loader v-show="is_loading"></Loader>
-  <Pagination :next="latest_news.next" :previous="latest_news.previous" @previous-page="load_news" @next-page="load_news">
+  <Pagination :next="latest_news.next" :previous="latest_news.previous" @previous-page="prv_article"
+    @next-page="next_article">
   </Pagination>
 </template>
 <script>
@@ -29,6 +30,15 @@ export default {
   methods: {
     read_article(item) {
       this.view_article = item;
+    },
+
+    next_article() {
+      this.current_url = atob(this.urls.proxy) + encodeURI(this.latest_news.next);
+      this.load_news();
+    },
+    prv_article() {
+      this.current_url = atob(this.urls.proxy) + encodeURI(this.latest_news.previous);
+      this.load_news();
     },
     load_news(url = null) {
       // show loader until done

@@ -15,12 +15,12 @@
       <div class="overflow-y-scroll max-w-full rounded-md pr-2 pb-8">
         <p v-html="news.content"></p>
       </div>
+      <Comments :slug="news.slug"></Comments>
     </div>
-    <!-- <Comments></Comments> -->
   </aside>
 </template>
 <script>
-import Comments from "./Comments.vue"
+import Comments from "../Comments/Comments.vue"
 export default {
   name: 'Article',
   components: {

@@ -1,19 +1,17 @@
 <template>
     <section class="comments overflow-y-visible">
-        <div v-show="is_loading" class="mb-4">Loading comments...</div>
+        <h2 v-show="is_loading" class="mb-4">Loading comments...</h2>
         <h2 v-if="comments?.length > 0" class="mt-6 font-bold text-xl">Comments</h2>
         <CommentItem :comment="comment" v-for="comment in comments" :key="comment.id"></CommentItem>
     </section>
 </template>
 <script>
-import CommentItem from './Item.vue';
-import Loader from '../Loader.vue';
+import CommentItem from './Item.vue'
 export default {
     name: 'Comments',
     props: ['slug'],
     components: {
-        CommentItem,
-        Loader
+        CommentItem
     },
     data() {
         return {
@@ -23,7 +21,7 @@ export default {
             },
             comments: [],
             connection_error: false,
-            is_loading: false
+            is_loading: true
         }
     },
     methods: {
@@ -43,7 +41,6 @@ export default {
 
                     // store response in the local variable
                     this.comments = response.results;
-                    console.log(this.comments);
 
                     // hide error message & loader
                     this.connection_error = false;

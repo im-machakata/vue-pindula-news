@@ -1,7 +1,7 @@
 <template>
-    <div class="comment flex">
-        <div class="name">{{ comment.name }}</div>
-        <div class="comment"></div>
+    <div class="comment">
+        <h3 class="name font-bold">{{ comment.name }}</h3>
+        <div class="comment mb-4">{{ comment.text }}</div>
     </div>
 </template>
 <script>

@@ -1,6 +1,7 @@
 <template>
-    <section class="comments text-white overflow-y-visible" v-for="comment in comments" :key="comment.id">
-        <CommentItem :comment="comment"></CommentItem>
+    <section class="comments overflow-y-visible">
+        <h2 v-if="comments?.length > 0" class="mt-6 font-bold text-xl">Comments</h2>
+        <CommentItem :comment="comment" v-for="comment in comments" :key="comment.id"></CommentItem>
     </section>
 </template>
 <script>

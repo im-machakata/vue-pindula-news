@@ -986,6 +986,10 @@ blockquote {
     margin-left: 0.5rem;
     margin-right: 0.5rem;
   }
+  .lg\:mx-4 {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
   .lg\:mr-10 {
     margin-right: 2.5rem;
   }

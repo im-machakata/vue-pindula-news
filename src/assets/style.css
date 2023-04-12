@@ -467,7 +467,6 @@ a {
 body {
   --tw-bg-opacity: 1;
   background-color: rgb(30 58 138 / var(--tw-bg-opacity));
-  font-family: "Newsreader";
 }
 .loader {
   display: flex;
@@ -517,6 +516,7 @@ body {
   --tw-border-opacity: 1;
   border-color: rgb(29 78 216 / var(--tw-border-opacity));
   text-align: left;
+  font-family: "Poppins";
   --tw-text-opacity: 1;
   color: rgb(219 234 254 / var(--tw-text-opacity));
   --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
@@ -602,6 +602,7 @@ blockquote {
   transition-duration: 500ms;
 }
 .news-title {
+  font-family: "Poppins";
   font-size: 1.25rem;
   line-height: 1.75rem;
   font-weight: 600;
@@ -609,6 +610,9 @@ blockquote {
 .news-title:hover {
   --tw-text-opacity: 1;
   color: rgb(191 219 254 / var(--tw-text-opacity));
+}
+.excerpt {
+  font-family: "Poppins";
 }
 .dialog {
   position: fixed;
@@ -800,6 +804,9 @@ blockquote {
   --tw-space-x-reverse: 0;
   margin-right: calc(0.5rem * var(--tw-space-x-reverse));
   margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
+}
+.overflow-y-visible {
+  overflow-y: visible;
 }
 .overflow-y-scroll {
   overflow-y: scroll;

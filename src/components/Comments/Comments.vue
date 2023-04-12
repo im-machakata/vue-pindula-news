@@ -1,7 +1,7 @@
 <template>
     <section class="comments overflow-y-visible">
         <h2 v-show="is_loading" class="mb-4">Loading comments...</h2>
-        <h2 v-if="comments?.length > 0" class="mt-6 font-bold text-xl">Comments</h2>
+        <h2 v-if="comments?.length > 0" class="mt-6 font-bold text-xl mb-2">Comments</h2>
         <CommentItem :comment="comment" v-for="comment in comments" :key="comment.id"></CommentItem>
     </section>
 </template>

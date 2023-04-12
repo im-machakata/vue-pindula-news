@@ -552,6 +552,14 @@ body {
   padding-right: 0.5rem;
   padding-top: 0.75rem;
 }
+.comment-parent {
+  margin-bottom: 1rem;
+  border-radius: 0.25rem;
+  border-width: 1px;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.75rem;
+}
 blockquote {
   margin-top: 0.75rem;
   margin-bottom: 0.75rem;

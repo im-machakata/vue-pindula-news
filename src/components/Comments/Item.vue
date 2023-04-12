@@ -1,6 +1,6 @@
 <template>
     <div class="comment-container">
-        <div class="comment-parrent" :class="{ 'rounded-br-none': comment.children.length > 0 }">
+        <div class="comment-parent" :class="{ 'rounded-br-none': comment.children.length > 0 }">
             <div class="name">
                 <span class="font-bold mr-1">{{ comment.name }}</span>
                 <span class="text-neutral-700 ml-1">{{ comment.created_on }}</span>

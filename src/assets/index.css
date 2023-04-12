@@ -26,6 +26,9 @@
   .news-item {
     @apply text-left text-blue-100 border-2 border-blue-700 shadow hover:shadow-lg rounded-md mb-5 mt-2 md:mt-0 cursor-pointer transition-all duration-300 font-poppins;
   }
+  .comment {
+    @apply text-black;
+  }
   blockquote {
     @apply bg-blue-100 p-3 rounded my-3;
   }

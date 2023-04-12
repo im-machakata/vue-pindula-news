@@ -65,7 +65,7 @@ img {
   overflow: hidden;
 }
 
-.news-item.closed .excerpt {
+.news-item .excerpt {
   display: -webkit-box;
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;

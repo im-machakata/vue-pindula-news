@@ -13,7 +13,7 @@
         <h2 class="text-3xl" v-bind:title="news.title">{{ news.title }}</h2>
         <a :href="'//zero.pindula.co.zw/' + news.slug" class="pb-4" target="_blank">
           https://zero.pindula.co.zw/{{ news.slug }}</a>
-        <div class="pr-lg-2">
+        <div class="lg:pr-2">
           <p v-html="news.content" class="the-news"></p>
           <Comments :slug="news.slug"></Comments>
         </div>
